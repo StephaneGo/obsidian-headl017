@@ -8,6 +8,9 @@ Tags:
 
 # Notes
 
+![SAGA flow](images/saga-pattern-flow.webp)
+
+
 L'architecture SAGA est un modèle de gestion des transactions distribuées qui permet de maintenir la cohérence des données dans des systèmes répartis, notamment les architectures de microservices. Plutôt que d'utiliser une unique transaction atomique répartie (comme le protocole Two-Phase Commit, 2PC, qui peut bloquer le système et constituer un point de défaillance), SAGA divise une grande transaction en plusieurs sous-transactions locales, exécutées séquentiellement. Chaque étape a sa propre transaction locale qui met à jour la base de données correspondante et déclenche la suivante.
 
 Si une étape échoue, SAGA utilise une action compensatoire pour annuler les effets des étapes précédentes, assurant ainsi la cohérence globale sans bloquer le système. Ce modèle élimine les points de blocage et permet une meilleure tolérance aux pannes dans les systèmes distribués.
@@ -24,3 +27,4 @@ Ainsi, l’architecture SAGA est un modèle robuste pour gérer les transactions
 
 # Références
 
+[https://www.baeldung.com/cs/saga-pattern-microservices](https://www.baeldung.com/cs/saga-pattern-microservices)
