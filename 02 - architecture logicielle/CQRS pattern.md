@@ -9,7 +9,7 @@ Tags:
 
 # Notes
 
-
+![[CQRS-pattern.png]]
 
 # Références
 
